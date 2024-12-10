@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are You Happy?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f7ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      color: #0073e6;
+    }
+    .btn {
+      background-color: #0073e6;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #005bb5;
+    }
+    form {
+      margin-top: 20px;
+    }
+    input {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 80%;
+      border-radius: 5px;
+      border: 1px solid #0073e6;
+    }
+    button[type="submit"] {
+      background-color: #28a745;
+    }
+    button[type="submit"]:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Are You Happy with It?</h1>
+    <button class="btn" data-response="yes">Yes</button>
+    <button class="btn" data-response="no">No</button>
+
+    <!-- Email Form -->
+    <form action="https://formsubmit.co/forworkonly3004@gmail.com" method="POST">
+      <input type="text" name="name" value="Sandli" required>
+      <input type="email" name="email" value="sandliprajapati24@gmail.com" required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const response = e.target.getAttribute('data-response');
+        alert(response === 'yes' ? "Glad you're happy! 😊" : "Let's make it better! 💪");
+      });
+    });
+  </script>
+</body>
+</html>
